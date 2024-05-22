@@ -1,0 +1,11 @@
+<ul>
+  @for (recipe of recipes; track recipe.id) {
+    <li [appIsVegetarian]="recipe.isVegetarian" (click)="selectRecipe(recipe)">
+      {{ recipe.name }}
+    </li>
+  } @empty {
+    <li>
+      No recipes
+    </li>
+  }
+</ul>

@@ -1,0 +1,8 @@
+<main>
+  <div class="container">
+    <app-header></app-header>
+    <app-recipe-list (selectedRecipe)="onSelect($event)"></app-recipe-list>
+    <app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>
+    <app-footer></app-footer>
+  </div>
+</main>

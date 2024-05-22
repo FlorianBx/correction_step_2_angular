@@ -1,0 +1,16 @@
+@if (recipe) {
+  <div>
+    <h2>{{ recipe.name }}</h2>
+    <p>{{ recipe.description | shorten: 12 }}</p>
+    <h3>Ingredients:</h3>
+    <ul>
+    @for (ingredient of recipe.ingredients; track recipe.ingredients) {
+      <li> {{ ingredient }}</li>
+    } @empty {
+      <li>No ingredients</li>
+    }
+    </ul>
+  </div>
+} @else {
+  <p>Please select a recipe to see the details.</p>
+}
